@@ -1,45 +1,209 @@
-* {
-    margin: 0;
-    padding: 0;
-    background-color: #333;
-    color: white;
-    font-family: Karla;
+:root {
+  --okColor: #249c15;
+  --mtcColor: #ffe600;
+  --warnColor: #e65c0d;
+  --dangerColor: #ff0000;
+  --whiteColor: #f1f1f1;
 }
 
-header nav ul{
-    display: flex;
-    justify-content: space-evenly;
-    list-style: none;
-    font-size: 25px;
-    padding: 5vh;
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: Karla;
+}
+
+body {
+  background-color: #333;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  font-size: 20px;
+  padding: 2.5vh;
+  background-color: black;
+}
+
+header nav ul li a {
+  text-decoration: none;
+}
+
+header nav ul li:hover {
+  transform: scale(1.1);
+  transition: 0.2s;
 }
 
 main {
-    display: flex;
-    justify-content: center;
-    margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10vh;
+}
+
+main .container1 {
+  width: 600px;
 }
 
 .ledsItem {
-    background-color: white;
-    width: 20px;
-    height: 20px;
-    border-radius: 50px;
+  background-color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
 }
 
-
 .controlPanel h3 {
-    margin-bottom: 5vh;
-    text-align: center;
+  margin-bottom: 5vh;
+  text-align: center;
 }
 
 .controlPanel ul {
-    display: flex;
-    gap: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 3vh;
 }
 
 .controlPanel ul li {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1vh;
+}
+
+.sensorLevel {
+  width: 350px;
+  margin: 0 auto;
+}
+
+.sensorLevel ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.sensorLevel ul li {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Button Part */
+
+.buttonValue {
+  margin-top: 8vh;
+  display: flex;
+  gap: 2vw;
+}
+
+.buttonValue div {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+.buttonValue div p {
+  text-align: center;
+}
+
+.buttonValue div ul {
+  display: flex;
+  list-style: none;
+}
+
+.buttonValue div ul li button {
+  width: 50px;
+  height: 25px;
+  color: #333;
+  margin: 2px;
+}
+
+.buttonValue div ul li button:hover {
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+
+.buttonNUKE {
+  margin-top: 10vh;
+}
+
+.buttonNUKE #NukeBtn {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #970505;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.activeNukeBtn {
+  transform: scale(0.9);
+  transition: 0.2s;
+  background-color: gray !important;
+}
+
+/* Animation */
+
+.staticGreen {
+  background-color: var(--okColor) !important;
+}
+
+.blinkMtc {
+  animation: blinkY 1s infinite;
+}
+
+.blinkDanger {
+  animation: blinkR 0.5s infinite;
+}
+
+.blinkWarning {
+  animation: blinkO 0.7s infinite;
+}
+
+/* Keyframes */
+
+@keyframes blinkY {
+  0% {
+    background-color: var(--mtcColor);
+  }
+  50% {
+    background-color: var(--mtcColor);
+  }
+  51% {
+    background-color: var(--whiteColor);
+  }
+  100% {
+    background-color: var(--whiteColor);
+  }
+}
+
+@keyframes blinkR {
+  0% {
+    background-color: var(--dangerColor);
+  }
+  50% {
+    background-color: var(--dangerColor);
+  }
+  51% {
+    background-color: var(--whiteColor);
+  }
+  100% {
+    background-color: var(--whiteColor);
+  }
+}
+
+@keyframes blinkO {
+  0% {
+    background-color: var(--warnColor);
+  }
+  50% {
+    background-color: var(--warnColor);
+  }
+  51% {
+    background-color: var(--whiteColor);
+  }
+  100% {
+    background-color: var(--whiteColor);
+  }
 }
