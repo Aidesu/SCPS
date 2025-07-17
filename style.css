@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    color: white;
+    font-family: Karla;
+}
+
+header nav ul{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    font-size: 25px;
+    padding: 5vh;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
+}
+
+.ledsItem {
+    background-color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+}
+
+
+.controlPanel h3 {
+    margin-bottom: 5vh;
+    text-align: center;
+}
+
+.controlPanel ul {
+    display: flex;
+    gap: 25px;
+}
+
+.controlPanel ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
