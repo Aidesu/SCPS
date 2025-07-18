@@ -230,7 +230,7 @@ document.getElementById("NukeBtn").addEventListener("click", function (){
   setTimeout(() => {
     
     let plutonium = 3.8;
-    let iradiation = 2.7;
+    let iradiation = 8.7;
     mesures.radiation += plutonium;
     mesures.radiation = parseFloat(mesures.radiation.toFixed(2));
     if(mesures.radiation >= 60){
@@ -238,8 +238,12 @@ document.getElementById("NukeBtn").addEventListener("click", function (){
         mesures.particulesFines = parseFloat(mesures.particulesFines.toFixed(0));
         mesures.qualiteAir += iradiation;
         mesures.qualiteAir = parseFloat(mesures.qualiteAir.toFixed(0));
-        mesures.temperature += 0.4;
+        mesures.temperature ++;
         mesures.temperature = parseFloat(mesures.temperature.toFixed(0));
+        plutonium *= iradiation;
+        if(mesures.particulesFines >= 400) {
+            iradiation -= 5;
+        }
     }
 
     loop();
