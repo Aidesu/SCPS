@@ -161,6 +161,17 @@ main .container1 {
   animation: blinkO 0.7s infinite;
 }
 
+main footer {
+  margin-top: 10vh;
+  height: 5vh;
+  width: 100%;
+  background-color: black;
+}
+
+main footer div {
+  text-align: center;
+}
+
 /* Keyframes */
 
 @keyframes blinkY {
